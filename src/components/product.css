@@ -1,0 +1,17 @@
+.product {
+    border: 2px solid #178fbe;
+    border-radius: 15px;
+    width: 220px;
+    display: inline-block;
+    margin-right: 7px;
+}
+.product:hover{
+    border-color: plum;
+    box-shadow: 1px 1px 0 3px cornflowerblue
+}
+
+.product h5{
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
