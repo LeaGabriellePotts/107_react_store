@@ -42,3 +42,12 @@ const catalog = [
     image: "public/images/oceanRodeo.jpeg",
   },
 ];
+
+// crete the service:
+class DataService {
+  getCatalog() {
+    // TO DO: get the catalog from server
+    return catalog;
+  }
+}
+export default DataService;
