@@ -3,7 +3,7 @@
 }
 
 .qty-picker {
-    display: inline-block;
+    display: flex;
     width: 25px;
     font-weight: bold;
 }

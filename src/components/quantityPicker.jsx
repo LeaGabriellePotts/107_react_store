@@ -1,12 +1,13 @@
 import "./quantityPicker.css";
 import { useState } from "react";
 
-function QuantityPicker() {
+function QuantityPicker(props) {
   const [quantity, setQuantity] = useState(1);
 
   function handleIncrease() {
     let nextVal = quantity + 1;
     setQuantity(nextVal);
+    props.onChange(nextVal);
   }
 
   function handleDecrease() {
@@ -14,15 +15,22 @@ function QuantityPicker() {
 
     let nextVal = quantity - 1;
     setQuantity(nextVal);
+    props.onChange(nextVal);
   }
 
   return (
     <div className="qty-picker">
-      <button disabled={quantity === 1} onClick={handleDecrease}>
+      <button
+        className="btn btn-sm btn-dark"
+        disabled={quantity === 1}
+        onClick={handleDecrease}
+      >
         -
       </button>
       <label>{quantity}</label>
-      <button onClick={handleIncrease}>+</button>
+      <button className="btn btn-sm btn-dark" onClick={handleIncrease}>
+        +
+      </button>
     </div>
   );
 }
