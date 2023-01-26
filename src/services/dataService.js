@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const catalog = [
   {
     title: "Core",
@@ -43,11 +45,11 @@ const catalog = [
   },
 ];
 
-// crete the service:
+// create the service:
 class DataService {
-  getCatalog() {
-    // TO DO: get the catalog from server
-    return catalog;
+  async getCatalog() {
+    let response = await axios.get("http://127.0.0.1:5000/api/catalog");
+    return response.data;
   }
 }
 export default DataService;

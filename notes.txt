@@ -1,3 +1,10 @@
+#terminal
+(cmd t to open a new terminal tab)
+npm start (to start server front end)
+
+# to stop server:  ctrl + c
+
+
 # initialize the repository
 git init
 
